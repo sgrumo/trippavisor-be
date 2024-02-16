@@ -15,7 +15,6 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          secrets: |
-            BEARER_TOKEN
+          secrets: BEARER_TOKEN
         env:
           BEARER_TOKEN: ${{ secrets.DATOCMS_AUTH_TOKEN }}
