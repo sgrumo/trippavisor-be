@@ -6,8 +6,9 @@ pub struct FestivalsResponse {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+#[serde(rename_all = "camelCase")]
 pub struct FestivalData {
-    pub allFestivals: Vec<Festival>,
+    pub all_festivals: Vec<Festival>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -55,14 +56,16 @@ pub struct Tag {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+#[serde(rename_all = "camelCase")]
 pub struct Thumbnail {
-    pub responsiveImage: ResponsiveImage,
+    pub responsive_image: ResponsiveImage,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+#[serde(rename_all = "camelCase")]
 pub struct ResponsiveImage {
     pub src: String,
-    pub srcSet: String,
+    pub src_set: String,
     pub width: u32,
     pub height: u32,
     pub alt: String,
