@@ -38,8 +38,7 @@ async fn main(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
         Err(err) => return Response::error(format!("Internal Server Error: {err}"), 500),
     };
 
-    let origins = ["https://trippavisor-fe-develop.vercel.app"];
-
+    let origins = ["https://trippavisor.it", "https://dev.trippavisor.it"];
     let cors_headers: Vec<&str> = vec!["Content-Type"];
 
     let cors = Cors::default()
